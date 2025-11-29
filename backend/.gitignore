@@ -1,0 +1,101 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+conda_env/
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+*.secrets*
+secrets.*
+
+# Logs and debug
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.pytest_cache/*
+
+# Type checker / linters
+.mypy_cache/
+.dmypy.json
+.dmypy/
+.pytype/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Django/Flask/FastAPI specific (common runtime artifacts)
+instance/
+.webassets-cache/
+celerybeat-schedule
+
+# Databases (local)
+*.db
+*.sqlite3
+*.sqlite
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.swp
+*.swo
+
+# Local tooling
+.poetry/
+.python-version
